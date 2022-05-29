@@ -94,10 +94,17 @@
                           <label class="modal-feedback-label" for="feedback">Комментарий</label>
                           <textarea class="modal-textarea" name="feedback" id="feedback" rows="5" placeholder="Введите текст"></textarea>
                           
-                          <button type="submit">Отправить</button>
-
-                          <input type="checkbox" name="agreement" id="agreement">
-                          <label for="agreement">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                          <label class="form-policy-group">
+                                <input class="checkbox visually-hidden" type="checkbox">
+                                <span class="custom-checkbox">
+                                    <svg class="custom-checkbox-icon">
+                                        <use href="./images/sprite.svg#icon-check" width="16" height="15"></use>
+                                    </svg>
+                                </span>
+                                <span class="form-policy-desc">Соглашаюсь с рассылкой и принимаю <a href="">Условия договора</a></span>
+                          </label>
+                          <button class="modal-btn-send" type="submit">Отправить</button>
+                          
                           
                         </form>
                     
