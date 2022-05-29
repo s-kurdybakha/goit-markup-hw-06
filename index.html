@@ -59,6 +59,48 @@
                <!-- modal-window -->
                <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
+                        <b class="contact-request">Оставьте свои данные, мы вам перезвоним</b>
+                        <form class="modal-form">
+                            <label class="modal-form-label">
+                                <span class="form-label">Имя</span> 
+                                <div class="modal-form-group">
+                                    <input class="modal-form-input" type="text" name="name">
+                                    <svg class="modal-icon" width="18" height="18">
+                                        <use href="./images/sprite.svg#icon-user-name"></use>
+                                    </svg>
+                                </div>
+                            </label>
+                         
+                            <label class="modal-form-label">
+                                <span class="form-label">Телефон</span>
+                                <div class="modal-form-group">
+                                    <input class="modal-form-input" type="tel" name="tel">
+                                    <svg class="modal-icon" width="18" height="18">
+                                        <use href="./images/sprite.svg#icon-telephone"></use>
+                                    </svg>
+                                </div>
+                            </label>
+                        
+                            <label class="modal-form-label">
+                                <span class="form-label">Почта</span>                               
+                                <div class="modal-form-group">
+                                    <input class="modal-form-input" type="email" name="email">
+                                    <svg class="modal-icon" width="18" height="18">
+                                        <use href="./images/sprite.svg#icon-email"></use>
+                                    </svg>
+                                </div>
+                            </label>
+
+                          <label class="modal-feedback-label" for="feedback">Комментарий</label>
+                          <textarea class="modal-textarea" name="feedback" id="feedback" rows="5" placeholder="Введите текст"></textarea>
+                          
+                          <button type="submit">Отправить</button>
+
+                          <input type="checkbox" name="agreement" id="agreement">
+                          <label for="agreement">Соглашаюсь с рассылкой и принимаю Условия договора</label>
+                          
+                        </form>
+                    
                         <button class="modal-btn-close" data-modal-close>
                             <svg class="close-icon" width="18" height="18">
                                 <use href="./images/sprite.svg#icon-close"></use>
@@ -66,6 +108,8 @@
                         </button>
                     </div>
                 </div>
+
+              
 
             <!-- features-section -->
             <section class="features-section section">
@@ -402,8 +446,26 @@
                         </li>
                     </ul>
                 </div> 
-            </div>     
-        </div>
+
+                <div class="subscription-group">
+                    <b class="footer-form-title">Подпишитесь на рассылку</b>
+                    <form class="footer-form">
+                        
+                        <input class="footer-form-input" type="text" name="email" placeholder="E-mail">
+                        
+                        <div class="footer-form-btn">
+                            <button class="footer-btn" type="submit">
+                                <span class="footer-btn-title">Подписаться</span>
+                                <svg class="footer-btn-icon" width="24" height="24">
+                                    <use href="./images/sprite.svg#icon-send"></use>
+                                </svg>
+                            </button>    
+                        </div>    
+                    </form>
+                </div> 
+            </div>              
+        </div>  
+        
     </footer>
 
     <script src="./js/modal.js"></script>
