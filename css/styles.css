@@ -746,6 +746,8 @@ footer
     background: var(--accent-border-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+
+    transition: background-color 250ms var(--timing-function);
 }
 
 .footer-btn-title {
@@ -1141,6 +1143,13 @@ input,textarea {
     border-color: transparent;
 
     color: var(--white-text-color);
+
+    transition: background-color 250ms var(--timing-function);
+}
+
+.modal-btn-send:focus-within,
+.modal-btn-send:hover {
+    background-color: var(--accent-color);
 }
 
 /* checkbox-style */
