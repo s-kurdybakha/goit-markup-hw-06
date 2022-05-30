@@ -768,10 +768,12 @@ footer
     display: flex;
     top: 50%;
     right: 28px;
-    transform: translateY(-50%);
+    transform: translateY(-50%); 
+}
 
-
- 
+.footer-btn:focus-within,
+.footer-btn:hover {
+    background-color: var(--secondary-accent-color);
 }
 
 
@@ -939,15 +941,15 @@ portfolio-section
 
 .modal {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     top: 50%;
     left: 50%;
 
     transform: translate(-50%, -50%); scale: (1);
 
-    min-width: 530px;
-    min-height: 580px;
+    min-width: 528px;
+    min-height: 581px;
 
     background-color: var(--main-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -958,58 +960,63 @@ portfolio-section
 }
 
 .modal-form {
-    display: flex;
-    flex-direction: column;
-    width: 448px;
-    margin-left: auto;
-    margin-right: auto;
+padding: 40px;
+
 
 }
 
 input,textarea {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px; 
+    cursor: pointer;
 }
 
 
 .contact-request {
+    display: block;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-    padding-top: 40px;
     letter-spacing: 0.03em;
     margin-bottom: 12px;
     color: var(--main-color);
 }
 
-.modal-form-input{
+.modal-form-input {
     height: 40px;
     width: 100%;
     padding-left: 42px;
+    
+    transition: border-color 250ms var(--timing-function);
 }
 
 
+.modal-form-group:focus-within .modal-form-input,
+.modal-form-group:hover .modal-form-input {
+    border-color: var(--accent-border-color);
+}
 
-.modal-form-group:focus,
-.modal-form-group:hover {
+.modal-form-group:focus-within .modal-icon,
+.modal-form-group:hover .modal-icon {
     fill: var(--accent-icon-color);
 }
 
-/* .modal-icon:focus,
-.modal-icon:hover {
-    fill: red;
-} */
-
-/* input:hover,
-input:focus {
-    border-color: red;
+.modal-textarea:focus-within,
+.modal-textarea:hover {
+    border-color: var(--accent-border-color);
+}
+    
+.modal-textarea:focus-within,
+.modal-textarea:hover {
+    border-color: var(--accent-border-color);
 }
 
-.modal-icon:hover,
-.modal-icon:focus {
-    fill: red;
-} */
+.custom-checkbox:focus-within,
+.custom-checkbox:hover {
+    outline-color: var(--accent-border-color);
+}
+
 
 .form-label {
     display: flex;
@@ -1017,6 +1024,7 @@ input:focus {
 }
 
 .modal-form-label {
+    display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -1028,16 +1036,20 @@ input:focus {
 
 
 .modal-feedback-label {
-    padding-bottom: 4px;
+    display: block;
+    margin-bottom: 4px;
 }
 
 .modal-textarea {
+    display: flex;
+    width: 100%;
     resize: none;
     margin-bottom: 20px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    padding-top: 12px;
-    padding-left: 16px;
+    padding: 12px 16px;
+
+    transition: border-color 250ms var(--timing-function);
 }
 
 .modal-form-group {
@@ -1050,6 +1062,8 @@ input:focus {
     top: 50%;
     transform: translateY(-50%);
     margin-left: 12px;
+
+    transition: fill 250ms var(--timing-function);
 }
 
 ::placeholder {
@@ -1071,6 +1085,11 @@ input:focus {
     letter-spacing: 0.03em;
 
     color: rgba(255, 255, 255, 0.6);
+}
+
+.footer-form-input:hover,
+.footer-form-input:focus {
+    border-color: var(--accent-border-color);
 }
 
 .modal-btn-close {
@@ -1104,6 +1123,7 @@ input:focus {
     line-height: 1.18;
     width: 200px;
     height: 50px;
+    margin-top: 30px;
 
     display: flex;
     cursor: pointer;
@@ -1129,7 +1149,11 @@ input:focus {
     display: flex;
     align-items: center;
     padding-left: 13px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
+}
+
+.form-policy-link {
+    color: var(--accent-color);
 }
 
 .custom-checkbox {
@@ -1148,9 +1172,12 @@ input:focus {
     outline: 2px solid var(--main-color);
     outline-offset: -2px;
 
+    transition: outline-color 250ms var(--accent-border-color);
+
 }
 
 .custom-checkbox-icon {
+    display: flex;
     fill: inherit;
     opacity: 0;
 
@@ -1163,6 +1190,15 @@ input:focus {
 
 .checkbox:checked+.custom-checkbox .custom-checkbox-icon {
     opacity: 1;
-
 }
 
+
+
+/* .custom-checkbox:hover .custom-checkbox-icon, {
+    
+}  */
+
+.modal-form-label:focus-within,
+.modal-form-label:hover {
+
+}
