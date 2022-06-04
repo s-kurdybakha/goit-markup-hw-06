@@ -733,6 +733,8 @@ footer
     color: var(--white-text-color);
     padding-left: 16px;
 
+    transition: border-color 250ms var(--timing-function);
+
 }
 
 .footer-form-btn {
@@ -745,6 +747,8 @@ footer
     height: 50px;
     background: var(--accent-border-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+    border: none;
     border-radius: 4px;
 
     transition: background-color 250ms var(--timing-function);
@@ -943,8 +947,6 @@ portfolio-section
 
 .modal {
     position: absolute;
-    /* display: flex;
-    flex-direction: column; */
     top: 50%;
     left: 50%;
 
@@ -956,15 +958,10 @@ portfolio-section
     background-color: var(--main-bg-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    padding: 40px;
     
     transition: transform 250ms var(--timing-function);
   
-}
-
-.modal-form {
-padding: 40px;
-
-
 }
 
 input,textarea {
@@ -997,6 +994,7 @@ input,textarea {
 .modal-form-group:focus-within .modal-form-input,
 .modal-form-group:hover .modal-form-input {
     border-color: var(--accent-border-color);
+    outline-color: var(--accent-border-color);
 }
 
 .modal-form-group:focus-within .modal-icon,
@@ -1004,14 +1002,11 @@ input,textarea {
     fill: var(--accent-icon-color);
 }
 
+
 .modal-textarea:focus-within,
 .modal-textarea:hover {
     border-color: var(--accent-border-color);
-}
-    
-.modal-textarea:focus-within,
-.modal-textarea:hover {
-    border-color: var(--accent-border-color);
+    outline-color: var(--accent-border-color);
 }
 
 .custom-checkbox:focus-within,
@@ -1023,6 +1018,12 @@ input,textarea {
 .form-label {
     display: flex;
     margin-bottom: 4px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: var(--secondary-color);
 }
 
 .modal-form-label {
@@ -1039,7 +1040,17 @@ input,textarea {
 
 .modal-feedback-label {
     display: block;
+
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: var(--secondary-color);
+
+
     margin-bottom: 4px;
+    
 }
 
 .modal-textarea {
@@ -1158,7 +1169,6 @@ input,textarea {
     display: flex;
     align-items: center;
     padding-left: 13px;
-    /* margin-bottom: 30px; */
 }
 
 .form-policy-link {
@@ -1199,15 +1209,4 @@ input,textarea {
 
 .checkbox:checked+.custom-checkbox .custom-checkbox-icon {
     opacity: 1;
-}
-
-
-
-/* .custom-checkbox:hover .custom-checkbox-icon, {
-    
-}  */
-
-.modal-form-label:focus-within,
-.modal-form-label:hover {
-
 }
